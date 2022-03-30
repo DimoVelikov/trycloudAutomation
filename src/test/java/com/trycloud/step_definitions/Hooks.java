@@ -14,7 +14,7 @@ public class Hooks {
     @After
     public void teardownScenario(Scenario scenario){
 
-        //scenario.isFailed() --> if scenario fails this method will return TRUE boolean value
+     //   scenario.isFailed() --> if scenario fails this method will return TRUE boolean value
 
 
         if (scenario.isFailed()){
@@ -26,7 +26,7 @@ public class Hooks {
 
 
 
-
+//
         Driver.closeDriver();
 
         //System.out.println("====Closing browser using cucumber @After");

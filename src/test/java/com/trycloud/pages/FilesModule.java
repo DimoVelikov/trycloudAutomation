@@ -26,7 +26,4 @@ public class FilesModule {
     @FindBy(xpath = "//td[@class='selection']/input ")
     public List<WebElement> allBoxInFiles;
 
-
-
-
 }

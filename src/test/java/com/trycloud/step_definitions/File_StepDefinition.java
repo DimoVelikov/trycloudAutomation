@@ -10,13 +10,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.commons.logging.Log;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class File_StepDefinition extends LoginPage {
+public class File_StepDefinition {
 
     LoginPage loginPage = new LoginPage();
     BasePage basePage = new BasePage();
@@ -25,10 +26,7 @@ public class File_StepDefinition extends LoginPage {
 
     @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        loginPage.usernameInput.sendKeys("user7");
-        loginPage.passwordInput.sendKeys("Userpass123");
-        loginPage.loginBtn.click();
+        loginPage.Login();
     }
 
     @When("user clicks {string} module")

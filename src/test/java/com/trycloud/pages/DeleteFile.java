@@ -15,8 +15,7 @@ public class DeleteFile {
 
     }
 
-    @FindBy(xpath = "//label[contains(@for,'select-files')]")
-    public WebElement select_icons;
+
 
     @FindBy(xpath = "(//span[@id='selectedActionsList']//a[@class='actions-selected']//span[@class='icon icon-more'])[1]")
     public WebElement actionsButton;
@@ -27,14 +26,16 @@ public class DeleteFile {
     @FindBy(xpath = "//a[@class='nav-icon-trashbin svg']")
     public WebElement deletedFiles;
 
-    @FindBy(xpath = "//span[text()='Collection']")
-    public WebElement collectionFile;
+    @FindBy(xpath = "//tr[@data-file=\"Talk\"]//label")
+    public WebElement talkFileBeforeDelete;
 
-    @FindBy(xpath = "//a[@id='modified' and @class='columntitle' and @data-sort='mtime' ]/span[text()='Deleted']")
-    public WebElement deletedButton;
-
-
-    @FindBy(xpath = "(//span[@class='innernametext'])[3]")
+    //span[@class='nametext extra-data' and @data-original-title='Talk' ]//span[@class='innernametext' and text()='Talk'][1]
+    @FindBy(xpath = "(//span[@class='nametext extra-data' and @data-original-title='Talk' ]//span[@class='innernametext' and text()='Talk'])[1]")
     public WebElement talkFile;
+
+    @FindBy(xpath = "//span[text()='Deleted']")
+    public WebElement deletedButtonOnTopRight;
+
+
 
 }

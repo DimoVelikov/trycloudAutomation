@@ -17,13 +17,13 @@ public class ViewContactList_stepDefinitions {
     LoginPage loginPage = new LoginPage();
     ContactsPage contactsPage = new ContactsPage();
 
-    @Given("user on the dashboard page")
+/*    @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         loginPage.usernameInput.sendKeys(ConfigurationReader.getProperty("username"));
         loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
         loginPage.loginBtn.click();
-    }
+    }*/
 
     @When("the user clicks the {string} modules")
     public void the_user_clicks_the_modules(String string) {

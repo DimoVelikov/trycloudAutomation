@@ -23,7 +23,7 @@ public class US08_Sina {
     LoginPage loginPage = new LoginPage();
     DeleteFile deleteFile = new DeleteFile();
 
-    @Given("user on the dashboard page")
+/*    @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
@@ -31,7 +31,7 @@ public class US08_Sina {
         loginPage.passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
         loginPage.loginBtn.click();
         
-    }
+    }*/
     @When("the user clicks the Files module")
     public void the_user_clicks_the_Files_module() {
 

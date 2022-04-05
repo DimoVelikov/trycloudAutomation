@@ -19,11 +19,11 @@ public class LoginFunction_ValidCredential_StepDefinitions {
         loginPage.passwordInput.sendKeys(passcode);
 
     }
-    @When("user click the login button")
+/*    @When("user click the login button")
     public void user_click_the_login_button() {
         loginPage.loginBtn.click();
 
-    }
+    }*/
     @Then("verify the user should be at the dashboard page")
     public void verify_the_user_should_be_at_the_dashboard_page() {
         String expectedTitle="Dashboard";

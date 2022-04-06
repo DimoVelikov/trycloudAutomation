@@ -1,13 +1,12 @@
 package com.trycloud.pages;
-
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
-public class FilePage {
+
+public class FilePage extends BasePage {
 
 
 
@@ -48,5 +47,32 @@ public class FilePage {
 
    @FindBy(xpath = "//span[.='Screenshot 2022-03-13 232534']")
     public WebElement newFile;
+
+
+    @FindBy(xpath = "//a[@aria-label]")
+    public List<WebElement> modules;
+
+    @FindBy(xpath = "//a[@class='action action-menu permanent']")
+    public WebElement actionButton;
+
+    @FindBy(xpath = "//a")
+    public List<WebElement> options;
+
+    @FindBy(xpath = "//a")
+    public List<WebElement> subModule;
+
+    @FindBy(xpath = "//*[@id=\"fileList\"]/tr/td[1]/a/span[1]/span")
+    public WebElement fileName;
+
+    @FindBy (id = "commentsTabView")
+    public WebElement commentBtn;
+
+    @FindBy (xpath = "//div[@class='message']")
+    public WebElement commentInput;
+
+    @FindBy (xpath = "//input[@class='submit icon-confirm has-tooltip']")
+    public WebElement commentSubmit;
+
+
 
 }

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class FilePage {
 
 
@@ -25,7 +27,7 @@ public class FilePage {
 
 
 
-    @FindBy(xpath = "//span[.='New folder']")
+    @FindBy(xpath = "//a[@data-templatename='New folder']")
     public WebElement newFolder;
 
 
@@ -33,13 +35,18 @@ public class FilePage {
    @FindBy(id = "view13-input-folder")
    public WebElement folderBox;
 
-   @FindBy(xpath = "//input[@class='icon-confirm']")
+   @FindBy(xpath = "(//input[@type='submit'])[2]")
    public WebElement submitButton;
 
 
-  @FindBy(xpath = "//span[.='New folder']/span")
-   public WebElement newFolderIcon;
+  @FindBy(xpath = "//span[@class='innernametext']")
+   public List<WebElement> newFolderIcon;
 
 
+   @FindBy(xpath = "//label[@for='file_upload_start'] ")
+    public WebElement uploadFileIcon;
+
+   @FindBy(xpath = "//span[.='Screenshot 2022-03-13 232534']")
+    public WebElement newFile;
 
 }

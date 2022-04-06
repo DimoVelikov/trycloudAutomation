@@ -23,5 +23,14 @@ public class FilePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"fileList\"]/tr/td[1]/a/span[1]/span")
     public WebElement fileName;
 
+    @FindBy (id = "commentsTabView")
+    public WebElement commentBtn;
+
+    @FindBy (xpath = "//div[@class='message']")
+    public WebElement commentInput;
+
+    @FindBy (xpath = "//input[@class='submit icon-confirm has-tooltip']")
+    public WebElement commentSubmit;
+
 
 }
